@@ -5591,7 +5591,7 @@
             trackData.push(0x00);
             
             // Build MIDI file (Format 0 - single track)
-            const midiFile = new Uint8Array(14 + trackData.length);
+            const midiFile = new Uint8Array(22 + trackData.length);
             let offset = 0;
             
             // Header chunk
