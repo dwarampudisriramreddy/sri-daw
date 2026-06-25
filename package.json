@@ -1,0 +1,42 @@
+{
+  "name": "scientific-daw",
+  "version": "1.0.0",
+  "description": "Scientific DAW - Advanced Music Theory & Composition Tool",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run copy",
+    "copy": "node copy-assets.js",
+    "download-soundfont": "node download-soundfont.js",
+    "setup-sf2": "node setup-sf2.js",
+    "setup-offline": "npm run download-soundfont && npm run setup-sf2 && npm run build",
+    "sync": "npx cap sync",
+    "open:ios": "npx cap open ios",
+    "open:android": "npx cap open android",
+    "serve": "npx cap serve",
+    "start": "npm run build && node server.js",
+    "dev": "npm run build && node server.js"
+  },
+  "keywords": [
+    "scientific",
+    "daw",
+    "music",
+    "theory",
+    "chords",
+    "melody",
+    "piano-roll",
+    "composition"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@capacitor/cli": "^5.5.0"
+  },
+  "dependencies": {
+    "@capacitor/android": "^5.7.8",
+    "@capacitor/app": "^5.0.6",
+    "@capacitor/core": "^5.5.0",
+    "@capacitor/filesystem": "^5.1.4",
+    "@capacitor/share": "^5.0.6",
+    "tone": "^15.1.22"
+  }
+}
